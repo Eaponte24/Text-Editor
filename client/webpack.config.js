@@ -28,6 +28,8 @@ module.exports = () => {
         swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: 'Jate',
         short_name: 'Jate',
         description: 'A Text Editor for the Web',
@@ -63,10 +65,6 @@ module.exports = () => {
             },
           },
         },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        type: 'asset/resource',
-      },
  ],
     },
   };
